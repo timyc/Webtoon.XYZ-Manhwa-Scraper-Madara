@@ -1,0 +1,169 @@
+/* Start Metabox CSS */
+
+#wt-crawler-settings-page .crawler-listing > ul > li.updating-manga:after {
+    content: '( Update Manga )';
+    color: #406aa0;
+    font-weight: 700;
+}
+
+#wt-crawler-settings-page .form-table td > span {
+    vertical-align: text-bottom;
+}
+
+#wt-crawler-settings-page .form-table tbody > tr > th {
+    text-align: right;
+}
+
+#wt-crawler-settings-page .form-table tbody > tr > td > .crawler-task-genres{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25% auto;
+}
+
+#wt-crawler-settings-page .crawler-listing > ul > li {
+    float: left;
+    width: calc( 25% - 20px );
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 20px;
+}
+
+#wt-crawler-settings-page ul#chapters-list {
+    margin-top: 8px;
+}
+
+#wt-crawler-settings-page ul#chapters-list > li {
+    font-weight: 600;
+}
+
+#wt-crawler-settings-page ul#chapters-list > li > ul {
+    font-weight: 400;
+    margin-left: 18px;
+    margin-top: 10px;
+}
+
+#wt-crawler-settings-page p.warning {
+    color: #ea0000;
+    font-weight: 500;
+}
+
+#wt-crawler-settings-page ul#chapters-list img {
+    margin-right: 5px;
+    height: 18px;
+}
+
+#wt-crawler-settings-page ul#chapters-list .mark {
+    position: absolute;
+    left: -22px;
+}
+
+#wt-crawler-settings-page ul#chapters-list li {
+    position: relative;
+}
+/* End Metabox CSS */
+
+/* Start Progress Metabox CSS */
+.manga-crawler-progress-wrapper .crawler-progress {
+    height: 30px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #d4d4d473;
+}
+
+.manga-crawler-progress-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.manga-crawler-progress-wrapper .crawler-progress .progress-completed {
+    background-color: #0085ba;
+    min-width: 0.1%;
+    max-width: 100%;
+    height: 100%;
+    transition: all ease-in-out 0.1s;
+}
+
+.manga-crawler-progress-wrapper .crawler-info{
+    text-align: center;
+}
+
+#wt-crawler-settings-page .button span.dashicons {
+    vertical-align: text-top;
+}
+
+/*#wt-crawler-settings-page button.button {
+    font-size: 15px;
+}*/
+
+.manga-crawler-progress-wrapper .crawler-actions {
+    display: inline-block;
+}
+
+.manga-crawler-progress-wrapper .crawler-stats {
+    float: right;
+    font-size: 28px;
+    vertical-align:  middle;
+}
+
+/* Crawler Manga Listing */
+.crawler-listing li.completed-manga {
+    font-weight: 600;
+}
+
+.crawler-listing li.completed-manga:after {
+    content: "\f147";
+    font-family: dashicons;
+    color: #448839;
+    font-size: 19px;
+    vertical-align: bottom;
+}
+
+.crawler-listing li {
+    font-size: 14px;
+}
+
+.crawler-listing li.blocked-manga:after {
+    content: "(Blocked by country) ";
+    font-family: dashicons;
+    color: #dc3232;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Update Log CSS */
+#update-log li > .manga {
+    font-weight: 600;
+    color: #0072aa;
+}
+
+#update-log ul {
+    margin-top: 0;
+    padding: 8px 10px 20px 0;
+}
+
+#update-log li > .manga:before {
+    content: "\f331";
+    font-family: dashicons;
+    margin-right: 5px;
+}
+
+#update-log ul > li > .volume {
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+#update-log ul > li > .volume + ul > li {
+    margin-left: 40px;
+}
+
+span#loading-error{
+    color: #ea0000;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.crawler-listing .list:after{content:' '; display: block; clear: both}
