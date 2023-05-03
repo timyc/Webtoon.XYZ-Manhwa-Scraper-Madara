@@ -1,16 +1,24 @@
+# Prerequisites
+
+You must have a proxy that you control (a squid proxy server is pretty good). You will need to *extract* certain cookies from Webtoon.xyz every week since they configured cookies to expire every week on CloudFlare. You can either do this through automation or manually.
+
+Your WordPress instance *must* be hosted on a VPS or a Dedicated Server. This is because most Shared Hosting services will not allow Proxy connections.
+
+# Limitations
+
+Thumbnails will not be automatically extracted since the upload process does not go through the proxy. Maybe you can implement that yourself?
+
 # How to use
 
 Install this as a WordPress plugin.
-
-You must have a proxy that you control (a squid proxy server is pretty good). You will need to *extract* certain cookies from Webtoon.xyz every week since they configured cookies to expire every week on CloudFlare. You can either do this through automation or manually.
 
 ![What you need](https://i.imgur.com/nwJXPkP.png)
 
 This needs to be extracted while you are connected to your proxy! CloudFlare ties these to the IP address. Make sure the proxy IP is not completely dirty (NO ColoCrossing IPs, RackNerd, Virmach, etc.), pay a little more for an actually decent server from SpeedyPage, Clouvider, etc.
 
-In `libs/simplehtmldom_1_5/simple_html_dom.php`,
-on line 73 replace the `cf_clearance` value (NOT KEY!) with the your own cf_clearance value. 
-On line 86, replace the `CURLOPT_USERAGENT` value with your own user agent value.
+In `libs/simplehtmldom_1_5/simple_html_dom.php`,\
+on line 73 replace the `cf_clearance` value (NOT KEY!) with the your own cf_clearance value. \
+On line 86, replace the `CURLOPT_USERAGENT` value with your own user agent value.\
 On line 102, replace the `CURLOPT_PROXY` with your own proxy address.
 
 Once again, Squid proxy is easy to set up and maintain. I would not recommend installing it on the server with your WordPress instance though. Lastly, to repeat, YOU WILL NEED TO CHANGE THESE VALUES (excluding your proxy) EVERY WEEK (168 HOURS EXPIRY)!
